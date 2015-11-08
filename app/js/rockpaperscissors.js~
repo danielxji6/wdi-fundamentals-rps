@@ -86,11 +86,6 @@ function playToFive() {
     	} else if (z === "computer") {
     		computerWins += 1;
     	}
-    	
-    	if (playerWins >= 5 || computerwins >= 5)
-    	{
-    		break;
-    	}
     }
     return [playerWins, computerWins];
 }
