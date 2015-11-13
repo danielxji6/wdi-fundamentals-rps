@@ -59,7 +59,7 @@ function getWinner(playerMove,computerMove) {
     	} else if (computerMove === "rock") {
     		winner = "computer";
     }}
-    else 
+    else
     {
     	if (computerMove === "rock") {
     		winner = "player";
@@ -79,10 +79,15 @@ function playToFive() {
     	var playerMove = getPlayerMove();
     	var computerMove = getComputerMove();
     	var result = getWinner(playerMove, computerMove);
+      console.log("Player:" + playerMove + " Computer:" + computerMove);
     	if (result === "player") {
+        console.log("Player win!");
     		playerWins += 1;
     	} else if (result === "computer") {
-    		computerWins += 1;
+        console.log("Computer win!");
+        computerWins += 1;
+    	} else {
+    	  console.log("Tie!");
     	}
     }
     return [playerWins, computerWins];
